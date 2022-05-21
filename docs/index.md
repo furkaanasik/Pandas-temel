@@ -1,3 +1,4 @@
+
 # **Pandas**
 
 ## **Pandas nedir?**
@@ -425,138 +426,16 @@ Pandas kütüphanesinin içerisinde yer alan DataFrame ile oluşturulabilir. Dat
 ```python
 df = pd.DataFrame([10, 20, 30, 40, 50], columns=["column 1"])
 
-df
+print(df)
 ```
 
-
-
-
-
-  <div id="df-0219a633-5edb-4149-b95f-a40da4dcc66d">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>column 1</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>10</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>30</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>40</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>50</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-0219a633-5edb-4149-b95f-a40da4dcc66d')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-0219a633-5edb-4149-b95f-a40da4dcc66d button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-0219a633-5edb-4149-b95f-a40da4dcc66d');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+       column 1
+    0        10
+    1        20
+    2        30
+    3        40
+    4        50
+    
 
 *DataFrame içerisindeki data parametresi yerine sözlük (Dictionary), Numpy dizisi veya başka bir DataFrame koyabiliriz.*
 
@@ -577,136 +456,15 @@ print(df.columns) # DataFrame içerisinde yer alan sütunların isimlerini geri 
 print("-" * 30)
 df.columns = ("sutün 1", "sütun 2", "sütun 3") # Sütünlar otomatik atadığımız değişkenlerle değiştir tekrar yeni bir değişkene atama işlemimize gerek yoktur.
 
-df
+print(df)
 ```
 
     Index(['column 1', 'column 2', 'column 3'], dtype='object')
     ------------------------------
+       sutün 1  sütun 2  sütun 3
+    0       10       20       30
+    1        1        2        3
     
-
-
-
-
-
-  <div id="df-1cab80e1-8165-4528-a5af-3a0cbefc53d2">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sutün 1</th>
-      <th>sütun 2</th>
-      <th>sütun 3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>10</td>
-      <td>20</td>
-      <td>30</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-1cab80e1-8165-4528-a5af-3a0cbefc53d2')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-1cab80e1-8165-4528-a5af-3a0cbefc53d2 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-1cab80e1-8165-4528-a5af-3a0cbefc53d2');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
 
 *Numpy dizilerini kullanarak iki boyutlu ve üç elemanlı bir dizi oluşturduk. Oluşan bu diziyi ise DataFrame data özelliği olarak verdik ve sütun isimlendirilmesi yaptık.*
 
@@ -763,18 +521,18 @@ print(df)
 ```
 
        pro1  pro2
-    0     2     7
-    1     8     3
-    2     7     3
-    3     1     9
-    4     4     5
+    0     8     3
+    1     8     7
+    2     0     0
+    3     9     8
+    4     2     0
     ------------------------------
        pro1  pro2
-    a     2     7
-    b     8     3
-    c     7     3
-    d     1     9
-    e     4     5
+    a     8     3
+    b     8     7
+    c     0     0
+    d     9     8
+    e     2     0
     
 
 ### **DataFrame indeks ile satırlara erişmek**
@@ -789,132 +547,13 @@ df = pd.DataFrame(arr, columns=["column 1", "column 2", "column 3"], index = ["a
 
 rows = df["a": "b"]
 
-rows
+print(rows)
 ```
 
-
-
-
-
-  <div id="df-3679fcba-ce44-4bef-ae15-7c3b99f48f2b">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>column 1</th>
-      <th>column 2</th>
-      <th>column 3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>a</th>
-      <td>10</td>
-      <td>20</td>
-      <td>30</td>
-    </tr>
-    <tr>
-      <th>b</th>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-3679fcba-ce44-4bef-ae15-7c3b99f48f2b')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-3679fcba-ce44-4bef-ae15-7c3b99f48f2b button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-3679fcba-ce44-4bef-ae15-7c3b99f48f2b');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+       column 1  column 2  column 3
+    a        10        20        30
+    b         1         2         3
+    
 
 *DataFrame içerisinden indekse göre satırlara erişmek istediğimizden bu şekilde kullanabiliriz.*
 
@@ -1062,176 +701,28 @@ print(df)
 print("-" * 30)
 
 locate = df.loc[1:5]
-locate
+print(locate)
 ```
 
         a   b   c   d   e
-    0  43  71  40  18  80
-    1  90  92  63  19  66
-    2  14  83  36  43  45
-    3  77  24  69  95  37
-    4  96  98  61  28  12
-    5  72  35  20  87  93
-    6  29  40  85  12  99
-    7  67  67  13  92  35
-    8  76  97  31  54  27
-    9  83  32  76  24  88
+    0  15  70  89  76  20
+    1  69  22  55   6  71
+    2  49  67  97  72  61
+    3  49  91  98  22  61
+    4  72  96   5  72  56
+    5  45  81  39  47  39
+    6  50  93  19  85  11
+    7  34  50  78  98  19
+    8  73  44  79  88   8
+    9  10   7  60  36  25
     ------------------------------
+        a   b   c   d   e
+    1  69  22  55   6  71
+    2  49  67  97  72  61
+    3  49  91  98  22  61
+    4  72  96   5  72  56
+    5  45  81  39  47  39
     
-
-
-
-
-
-  <div id="df-bbdd379b-34cb-490c-a543-83535bcc85b5">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>a</th>
-      <th>b</th>
-      <th>c</th>
-      <th>d</th>
-      <th>e</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>90</td>
-      <td>92</td>
-      <td>63</td>
-      <td>19</td>
-      <td>66</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>14</td>
-      <td>83</td>
-      <td>36</td>
-      <td>43</td>
-      <td>45</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>77</td>
-      <td>24</td>
-      <td>69</td>
-      <td>95</td>
-      <td>37</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>96</td>
-      <td>98</td>
-      <td>61</td>
-      <td>28</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>72</td>
-      <td>35</td>
-      <td>20</td>
-      <td>87</td>
-      <td>93</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-bbdd379b-34cb-490c-a543-83535bcc85b5')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-bbdd379b-34cb-490c-a543-83535bcc85b5 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-bbdd379b-34cb-490c-a543-83535bcc85b5');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
 
 *Burada oluşturmuş olduğumuz 10 satırlı bir DataFrame içerisindeki 1. elemandan ve 5. elemana (dahil) kadar bir veri seçme işlemi gerçekleştirdik.*
 
@@ -1249,168 +740,27 @@ print("-" * 30)
 
 locate = df.iloc[1:5]
 
-locate
+print(locate)
 ```
 
         a   b   c   d   e
-    0  20  69  97   7  43
-    1  80   9   1  24  27
-    2  24   4  41  78  89
-    3  69  89  46  61   9
-    4  81  36   2  81  73
-    5   3  74  14  65  67
-    6  41   9  73  69  13
-    7  77  40  21  64  85
-    8  26  39  93  32  65
-    9  93  93  70  81  39
+    0  41  40  18   4  96
+    1  41  58  51  95  76
+    2  19   9  98  82  58
+    3  81  56  16  78  64
+    4  11  55  72  11  97
+    5  30  53  30  39  79
+    6  15  63  62  17   2
+    7  23  36  68  50  74
+    8  32  94  71  74  90
+    9  53  41  89  33  45
     ------------------------------
+        a   b   c   d   e
+    1  41  58  51  95  76
+    2  19   9  98  82  58
+    3  81  56  16  78  64
+    4  11  55  72  11  97
     
-
-
-
-
-
-  <div id="df-d25eb34e-9786-48ce-8769-0a95e3fd9480">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>a</th>
-      <th>b</th>
-      <th>c</th>
-      <th>d</th>
-      <th>e</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>80</td>
-      <td>9</td>
-      <td>1</td>
-      <td>24</td>
-      <td>27</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>24</td>
-      <td>4</td>
-      <td>41</td>
-      <td>78</td>
-      <td>89</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>69</td>
-      <td>89</td>
-      <td>46</td>
-      <td>61</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>81</td>
-      <td>36</td>
-      <td>2</td>
-      <td>81</td>
-      <td>73</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d25eb34e-9786-48ce-8769-0a95e3fd9480')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-d25eb34e-9786-48ce-8769-0a95e3fd9480 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d25eb34e-9786-48ce-8769-0a95e3fd9480');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
 
 #### **iloc ile loc arasında aralıklı veri seçim farkı**
 
@@ -1450,22 +800,22 @@ print("-" * 30)
 
     Oluşturduğumuz DataFrame
         a   b   c   d   e
-    0  51  99  17  55  27
-    1  73  15  82  89  84
-    2  37  46  43  23  72
-    3  28  34  77  74  75
-    4  31  12  90  88  84
+    0  89  50  27  47  53
+    1  91  28  11  19  69
+    2  92  88  72  83  99
+    3  99  78  65  35  86
+    4  90  35  74  60  61
     ------------------------------
     loc ile veriye erişmek
         a   b   c   d   e
-    1  73  15  82  89  84
-    2  37  46  43  23  72
-    3  28  34  77  74  75
+    1  91  28  11  19  69
+    2  92  88  72  83  99
+    3  99  78  65  35  86
     ------------------------------
     iloc ile veriye erişmek
         a   b   c   d   e
-    1  73  15  82  89  84
-    2  37  46  43  23  72
+    1  91  28  11  19  69
+    2  92  88  72  83  99
     ------------------------------
     
 
@@ -1481,134 +831,14 @@ random_arr = np.random.randint(1, 100, size = (5, 5))
 df = pd.DataFrame(random_arr, columns=["a", "b", "c", "d", "e"])
 
 locate = df.iloc[0:3, 0:2]
-locate
+print(locate)
 ```
 
-
-
-
-
-  <div id="df-19c27e34-9206-4372-bf7d-4f74fdc9c852">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>a</th>
-      <th>b</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>84</td>
-      <td>60</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>84</td>
-      <td>30</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>52</td>
-      <td>12</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-19c27e34-9206-4372-bf7d-4f74fdc9c852')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-19c27e34-9206-4372-bf7d-4f74fdc9c852 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-19c27e34-9206-4372-bf7d-4f74fdc9c852');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+        a   b
+    0  11  74
+    1  57  27
+    2  88  18
+    
 
 *Burada veri seçme işlemi için dilersek iloc dilersek de loc kullanabiliriz. iloc veya loc içerisine verilen ilk aralık(0:3) satırları, ikinci aralık(0:2) ise sütunları temsil eder.*
 
@@ -1674,10 +904,10 @@ except Exception as e:
   logging.error(traceback.format_exc())
 ```
 
-    0    11
-    1    44
-    2    22
-    3    65
+    0    44
+    1    93
+    2    64
+    3    47
     Name: a, dtype: int64
     
 
@@ -1694,18 +924,14 @@ df = pd.DataFrame(random_arr, columns=["a", "b", "c", "d", "e"])
 
 locate = df.iloc[0:3]["a"]
 
-locate
+print(locate)
 ```
 
-
-
-
-    0    50
-    1    58
-    2     5
+    0    30
+    1    48
+    2    65
     Name: a, dtype: int64
-
-
+    
 
 *Burada iloc ile sütun seçme işlemi yaptık burada satır olarak 0'dan 3'e kadar olan satırları seçtik ve bu satırladın da sahip olduğu a sütununu aldık.*
 
@@ -1720,138 +946,14 @@ df = pd.DataFrame(random_arr, columns=["a", "b", "c", "d", "e"])
 
 locate = df.iloc[0:3][["a", "d", "e"]]
 
-locate
+print(locate)
 ```
 
-
-
-
-
-  <div id="df-15c09f6f-581f-4042-a1c5-05d952c94bee">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>a</th>
-      <th>d</th>
-      <th>e</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>9</td>
-      <td>14</td>
-      <td>88</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>54</td>
-      <td>90</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>87</td>
-      <td>79</td>
-      <td>28</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-15c09f6f-581f-4042-a1c5-05d952c94bee')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-15c09f6f-581f-4042-a1c5-05d952c94bee button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-15c09f6f-581f-4042-a1c5-05d952c94bee');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+        a   d   e
+    0  42  22  23
+    1  74  92  19
+    2   5  19  95
+    
 
 *Burada fancy yardımıyla birden fazla sütun seçme işlemini yapabildik.*
 
@@ -1865,154 +967,15 @@ import numpy as np
 random_arr = np.random.randint(1, 30, size = (10, 5))
 df = pd.DataFrame(random_arr, columns=["a", "b", "c", "d", "e"])
 
-df[df.a > 15]
+print(df[df.a > 15])
 ```
 
-
-
-
-
-  <div id="df-785a701c-acf5-4619-b497-b6da05787983">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>a</th>
-      <th>b</th>
-      <th>c</th>
-      <th>d</th>
-      <th>e</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2</th>
-      <td>29</td>
-      <td>3</td>
-      <td>24</td>
-      <td>22</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>18</td>
-      <td>4</td>
-      <td>1</td>
-      <td>22</td>
-      <td>19</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>27</td>
-      <td>18</td>
-      <td>19</td>
-      <td>26</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>17</td>
-      <td>3</td>
-      <td>28</td>
-      <td>13</td>
-      <td>4</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-785a701c-acf5-4619-b497-b6da05787983')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-785a701c-acf5-4619-b497-b6da05787983 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-785a701c-acf5-4619-b497-b6da05787983');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+        a   b   c   d   e
+    0  22  29   3  18  21
+    2  17  23  23   9  11
+    4  26  12  13  20  23
+    7  18  19   7  13  24
+    
 
 *Burada a sütunundaki değerlerin 15'den büyük olma koşulunu verdik. DataFrame içerisindeki sütuna erişmek için df.a ifadesini kullandık.*
 
@@ -2025,146 +988,16 @@ import numpy as np
 random_arr = np.random.randint(1, 30, size = (10, 5))
 df = pd.DataFrame(random_arr, columns=["a", "b", "c", "d", "e"])
 
-df[(df.a > 15) & (df.d > 5)]
+print(df[(df.a > 15) & (df.d > 5)])
 ```
 
-
-
-
-
-  <div id="df-54422a65-67cc-4b15-aff7-f62eceeee362">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>a</th>
-      <th>b</th>
-      <th>c</th>
-      <th>d</th>
-      <th>e</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>3</th>
-      <td>22</td>
-      <td>5</td>
-      <td>27</td>
-      <td>27</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>21</td>
-      <td>24</td>
-      <td>26</td>
-      <td>20</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>21</td>
-      <td>12</td>
-      <td>2</td>
-      <td>6</td>
-      <td>12</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-54422a65-67cc-4b15-aff7-f62eceeee362')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-54422a65-67cc-4b15-aff7-f62eceeee362 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-54422a65-67cc-4b15-aff7-f62eceeee362');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+        a   b   c   d   e
+    0  28  19   5  18  13
+    1  27  10   6   8   5
+    4  19  22  12   9  18
+    6  28  29  12  17  11
+    7  29  26   5  15  15
+    
 
 *Burada a sütunundaki değerlerin 15'den büyük olduğu ve d sütunundaki değerlerin 5'den büyük olduğu değerleri aldık.*
 
@@ -2181,150 +1014,16 @@ df = pd.DataFrame(random_arr, columns=["a", "b", "c"])
 
 df.columns = ["A", "B", "C"]
 
-df
+print(df)
 ```
 
-
-
-
-
-  <div id="df-d92c25da-e3f4-4d0a-8590-60e63422a804">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>A</th>
-      <th>B</th>
-      <th>C</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>24</td>
-      <td>11</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>13</td>
-      <td>26</td>
-      <td>29</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>7</td>
-      <td>14</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>20</td>
-      <td>17</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>16</td>
-      <td>20</td>
-      <td>17</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d92c25da-e3f4-4d0a-8590-60e63422a804')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-d92c25da-e3f4-4d0a-8590-60e63422a804 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d92c25da-e3f4-4d0a-8590-60e63422a804');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+        A   B   C
+    0  16  20   7
+    1  21  27   3
+    2   1  23   2
+    3  19  21  24
+    4  26  23   4
+    
 
 ### DataFrame birleştirme işlemleri (concat)
 
@@ -2352,32 +1051,32 @@ print(concat_df)
 
     Oluşturulan ilk DataFrame
         a   b   c
-    0  18  13  21
-    1  28  13   1
-    2  15  26  19
-    3   6  22  17
-    4   6  23  28
+    0  24  28  13
+    1  16   4  29
+    2  26  22  26
+    3  24  23  18
+    4  18  24  22
     ------------------------------
     Oluşturulan ikinci DataFrame
         a   b   c
-    0  36  26  42
-    1  56  26   2
-    2  30  52  38
-    3  12  44  34
-    4  12  46  56
+    0  48  56  26
+    1  32   8  58
+    2  52  44  52
+    3  48  46  36
+    4  36  48  44
     ------------------------------
     df1 ve df2 DataFrame birleştirme işlemi
         a   b   c
-    0  18  13  21
-    1  28  13   1
-    2  15  26  19
-    3   6  22  17
-    4   6  23  28
-    0  36  26  42
-    1  56  26   2
-    2  30  52  38
-    3  12  44  34
-    4  12  46  56
+    0  24  28  13
+    1  16   4  29
+    2  26  22  26
+    3  24  23  18
+    4  18  24  22
+    0  48  56  26
+    1  32   8  58
+    2  52  44  52
+    3  48  46  36
+    4  36  48  44
     
 
 *Burada indeksleri birleştirme işlemi sonrasında indeksleri incelediğimizde bir hata görüyoruz. İndeksler 0'dan başlayıp 5'e kadar ilerlemiş fakat tekrar 0'dan başlayıp 5'e kadar ilerlemiş.*
@@ -2406,32 +1105,32 @@ print(concat_df)
 
     Oluşturulan ilk DataFrame
         a   b   c
-    0  20   1  13
-    1  11   8  29
-    2   7  28  26
-    3   5  12   7
-    4  24  13  28
+    0   8  10  23
+    1  27  20   3
+    2  26   7   6
+    3  20  14  14
+    4  23  16  23
     ------------------------------
     Oluşturulan ikinci DataFrame
         a   b   c
-    0  40   2  26
-    1  22  16  58
-    2  14  56  52
-    3  10  24  14
-    4  48  26  56
+    0  16  20  46
+    1  54  40   6
+    2  52  14  12
+    3  40  28  28
+    4  46  32  46
     ------------------------------
     df1 ve df2 DataFrame birleştirme işlemi
         a   b   c
-    0  20   1  13
-    1  11   8  29
-    2   7  28  26
-    3   5  12   7
-    4  24  13  28
-    5  40   2  26
-    6  22  16  58
-    7  14  56  52
-    8  10  24  14
-    9  48  26  56
+    0   8  10  23
+    1  27  20   3
+    2  26   7   6
+    3  20  14  14
+    4  23  16  23
+    5  16  20  46
+    6  54  40   6
+    7  52  14  12
+    8  40  28  28
+    9  46  32  46
     
 
 *Burada concat methodunun içerisine ignore_index parametresine True atadığımızda indeks problemimiz ortadan kalktı.*
@@ -2447,359 +1146,41 @@ df1 = pd.DataFrame(random_arr, columns=["a", "b", "c"])
 random_arr = np.random.randint(1,30, size = (5,3))
 df2 = pd.DataFrame(random_arr, columns=["Column 1", "Column 2", "c"])
 
-pd.concat([df1, df2],  ignore_index=True)
+print(pd.concat([df1, df2],  ignore_index=True))
 ```
 
-
-
-
-
-  <div id="df-4268ecfe-eb12-467d-9e45-d816cabc7ce0">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>a</th>
-      <th>b</th>
-      <th>c</th>
-      <th>Column 1</th>
-      <th>Column 2</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>23.0</td>
-      <td>2.0</td>
-      <td>29</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>15.0</td>
-      <td>3.0</td>
-      <td>1</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>29.0</td>
-      <td>9.0</td>
-      <td>19</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>10.0</td>
-      <td>1.0</td>
-      <td>21</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>6.0</td>
-      <td>14.0</td>
-      <td>27</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>13</td>
-      <td>14.0</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>6</td>
-      <td>1.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>25</td>
-      <td>9.0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>23</td>
-      <td>3.0</td>
-      <td>24.0</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>6</td>
-      <td>28.0</td>
-      <td>17.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4268ecfe-eb12-467d-9e45-d816cabc7ce0')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-4268ecfe-eb12-467d-9e45-d816cabc7ce0 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4268ecfe-eb12-467d-9e45-d816cabc7ce0');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+          a     b   c  Column 1  Column 2
+    0   1.0  29.0  11       NaN       NaN
+    1  18.0  28.0   4       NaN       NaN
+    2  23.0  12.0   4       NaN       NaN
+    3  23.0  15.0  13       NaN       NaN
+    4  20.0  20.0  14       NaN       NaN
+    5   NaN   NaN   1      19.0      17.0
+    6   NaN   NaN  16      10.0      21.0
+    7   NaN   NaN   8      13.0       2.0
+    8   NaN   NaN   1      17.0       6.0
+    9   NaN   NaN  11       6.0       4.0
+    
 
 *Burada görülen NaN ifadeleri birinci DataFrame ile ikinci DataFrame eşleşmediğinden ortaya çıkmıştır. Görüldüğü gibi sütun c iki DataFramede eşleştiği için otomatik c ifadesinin bulunduğu sütuna yazılmıştır.*
 
 
 ```python
-pd.concat([df1, df2], join="inner", ignore_index=True)
+print(pd.concat([df1, df2], join="inner", ignore_index=True))
 ```
 
-
-
-
-
-  <div id="df-75077d07-cfa6-4c56-8e90-debda57a614c">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>c</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>29</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>19</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>27</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>25</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>23</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>6</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-75077d07-cfa6-4c56-8e90-debda57a614c')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-75077d07-cfa6-4c56-8e90-debda57a614c button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-75077d07-cfa6-4c56-8e90-debda57a614c');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+        c
+    0  11
+    1   4
+    2   4
+    3  13
+    4  14
+    5   1
+    6  16
+    7   8
+    8   1
+    9  11
+    
 
 *Burada iki DataFramede ortak sütun olanları birleştirdik.*
 
@@ -2821,139 +1202,15 @@ students = {
 
 student_department = pd.DataFrame(students)
 
-student_department
+print(student_department)
 ```
 
-
-
-
-
-  <div id="df-7c5fd56c-7399-4b9c-9eb6-ea2c2b49f054">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>department</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Furkan</td>
-      <td>Bilgisayar</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Özlem</td>
-      <td>Kimya</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Kardem</td>
-      <td>Yazılım</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Doga</td>
-      <td>Yazılım</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-7c5fd56c-7399-4b9c-9eb6-ea2c2b49f054')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-7c5fd56c-7399-4b9c-9eb6-ea2c2b49f054 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-7c5fd56c-7399-4b9c-9eb6-ea2c2b49f054');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+         name  department
+    0  Furkan  Bilgisayar
+    1   Özlem       Kimya
+    2  Kardem     Yazılım
+    3    Doga     Yazılım
+    
 
 
 ```python
@@ -2964,280 +1221,27 @@ graduation = {
 
 graduation_year = pd.DataFrame(graduation)
 
-graduation_year
+print(graduation_year)
 ```
 
-
-
-
-
-  <div id="df-bb92cd4b-0f44-4b75-b160-a1665dab9013">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>year</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Furkan</td>
-      <td>2023</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Özlem</td>
-      <td>2023</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Kardem</td>
-      <td>2024</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Doga</td>
-      <td>2021</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-bb92cd4b-0f44-4b75-b160-a1665dab9013')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-bb92cd4b-0f44-4b75-b160-a1665dab9013 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-bb92cd4b-0f44-4b75-b160-a1665dab9013');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+         name  year
+    0  Furkan  2023
+    1   Özlem  2023
+    2  Kardem  2024
+    3    Doga  2021
+    
 
 
 ```python
-pd.merge(student_department, graduation_year)
+print(pd.merge(student_department, graduation_year))
 ```
 
-
-
-
-
-  <div id="df-11757725-12fd-4952-a7fd-61f499bab3b5">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>department</th>
-      <th>year</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Furkan</td>
-      <td>Bilgisayar</td>
-      <td>2023</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Özlem</td>
-      <td>Kimya</td>
-      <td>2023</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Kardem</td>
-      <td>Yazılım</td>
-      <td>2024</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Doga</td>
-      <td>Yazılım</td>
-      <td>2021</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-11757725-12fd-4952-a7fd-61f499bab3b5')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-11757725-12fd-4952-a7fd-61f499bab3b5 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-11757725-12fd-4952-a7fd-61f499bab3b5');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+         name  department  year
+    0  Furkan  Bilgisayar  2023
+    1   Özlem       Kimya  2023
+    2  Kardem     Yazılım  2024
+    3    Doga     Yazılım  2021
+    
 
 *student_department ile graduation_year DataFramelerimizi birleştirmek istedik ve merge ifadesi kullanılarak bu işlemi gerçekleştirdik. merge methodou otomatik olarak ortak olan sütuna göre birleştirme işlemi yapar.*
 
@@ -3259,144 +1263,15 @@ student_department = pd.DataFrame(students)
 graduation_year = pd.DataFrame(graduation)
 
 school = pd.merge(student_department, graduation_year)
-school
+print(school)
 ```
 
-
-
-
-
-  <div id="df-092af27e-666d-4d3f-8522-8950423ddd68">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>department</th>
-      <th>year</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Furkan</td>
-      <td>Bilgisayar</td>
-      <td>2023</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Özlem</td>
-      <td>Kimya</td>
-      <td>2023</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Kardem</td>
-      <td>Yazılım</td>
-      <td>2024</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Doga</td>
-      <td>Yazılım</td>
-      <td>2021</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-092af27e-666d-4d3f-8522-8950423ddd68')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-092af27e-666d-4d3f-8522-8950423ddd68 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-092af27e-666d-4d3f-8522-8950423ddd68');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+         name  department  year
+    0  Furkan  Bilgisayar  2023
+    1   Özlem       Kimya  2023
+    2  Kardem     Yazılım  2024
+    3    Doga     Yazılım  2021
+    
 
 
 ```python
@@ -3407,280 +1282,26 @@ department = {
 
 department_heads = pd.DataFrame(department)
 
-department_heads
+print(department_heads)
 ```
 
-
-
-
-
-  <div id="df-fd6fc44f-2684-4186-9fe1-70255bf214a0">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>department</th>
-      <th>head</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Bilgisayar</td>
-      <td>Raif</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Yazılım</td>
-      <td>Volkan</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Kimya</td>
-      <td>Asım</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-fd6fc44f-2684-4186-9fe1-70255bf214a0')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-fd6fc44f-2684-4186-9fe1-70255bf214a0 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-fd6fc44f-2684-4186-9fe1-70255bf214a0');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+       department    head
+    0  Bilgisayar    Raif
+    1     Yazılım  Volkan
+    2       Kimya    Asım
+    
 
 
 ```python
-pd.merge(school, department_heads)
+print(pd.merge(school, department_heads))
 ```
 
-
-
-
-
-  <div id="df-ef526d9b-e6e0-4e8f-84b7-9b36f1213005">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>department</th>
-      <th>year</th>
-      <th>head</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Furkan</td>
-      <td>Bilgisayar</td>
-      <td>2023</td>
-      <td>Raif</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Özlem</td>
-      <td>Kimya</td>
-      <td>2023</td>
-      <td>Asım</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Kardem</td>
-      <td>Yazılım</td>
-      <td>2024</td>
-      <td>Volkan</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Doga</td>
-      <td>Yazılım</td>
-      <td>2021</td>
-      <td>Volkan</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ef526d9b-e6e0-4e8f-84b7-9b36f1213005')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-ef526d9b-e6e0-4e8f-84b7-9b36f1213005 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ef526d9b-e6e0-4e8f-84b7-9b36f1213005');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+         name  department  year    head
+    0  Furkan  Bilgisayar  2023    Raif
+    1   Özlem       Kimya  2023    Asım
+    2  Kardem     Yazılım  2024  Volkan
+    3    Doga     Yazılım  2021  Volkan
+    
 
 *Burada bölümün başkanlarını belirten bir DataFrame oluşuturduk. Bu DataFrame ile daha önceden Öğrenci-Bölüm DataFrame ve Öğrenci-Mezuniyet yılını birleştirdiğimiz DataFrame ile birleştirme işlemi yaptık. Burada department her ikisi için olduğundan otomatik olarak birleştirme işlemi gerçekleşti. Görüleceği gibi yazılım bölümünün birden fazla bulunmaktadır.*
 
@@ -3702,144 +1323,15 @@ student_department = pd.DataFrame(students)
 graduation_year = pd.DataFrame(graduation)
 
 school = pd.merge(student_department, graduation_year)
-school
+print(school)
 ```
 
-
-
-
-
-  <div id="df-8477287a-1ea3-4972-a24f-124e63963c5c">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>department</th>
-      <th>year</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Furkan</td>
-      <td>Bilgisayar</td>
-      <td>2023</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Özlem</td>
-      <td>Kimya</td>
-      <td>2023</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Kardem</td>
-      <td>Yazılım</td>
-      <td>2024</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Doga</td>
-      <td>Yazılım</td>
-      <td>2021</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-8477287a-1ea3-4972-a24f-124e63963c5c')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-8477287a-1ea3-4972-a24f-124e63963c5c button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-8477287a-1ea3-4972-a24f-124e63963c5c');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+         name  department  year
+    0  Furkan  Bilgisayar  2023
+    1   Özlem       Kimya  2023
+    2  Kardem     Yazılım  2024
+    3    Doga     Yazılım  2021
+    
 
 
 ```python
@@ -3850,282 +1342,28 @@ department = {
 
 department_heads = pd.DataFrame(department)
 
-department_heads
+print(department_heads)
 ```
 
-
-
-
-
-  <div id="df-222ea7aa-5517-4055-aeff-d9f72a95f145">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>department</th>
-      <th>head</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Bilgisayar</td>
-      <td>Raif</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Yazılım</td>
-      <td>Volkan</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Kimya</td>
-      <td>Asım</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-222ea7aa-5517-4055-aeff-d9f72a95f145')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-222ea7aa-5517-4055-aeff-d9f72a95f145 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-222ea7aa-5517-4055-aeff-d9f72a95f145');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+       department    head
+    0  Bilgisayar    Raif
+    1     Yazılım  Volkan
+    2       Kimya    Asım
+    
 
 
 ```python
 departments = pd.merge(school, department_heads)
 
-departments
+print(departments)
 ```
 
-
-
-
-
-  <div id="df-75f125f7-cadf-4b5e-af30-0910e958d2ec">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>department</th>
-      <th>year</th>
-      <th>head</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Furkan</td>
-      <td>Bilgisayar</td>
-      <td>2023</td>
-      <td>Raif</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Özlem</td>
-      <td>Kimya</td>
-      <td>2023</td>
-      <td>Asım</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Kardem</td>
-      <td>Yazılım</td>
-      <td>2024</td>
-      <td>Volkan</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Doga</td>
-      <td>Yazılım</td>
-      <td>2021</td>
-      <td>Volkan</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-75f125f7-cadf-4b5e-af30-0910e958d2ec')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-75f125f7-cadf-4b5e-af30-0910e958d2ec button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-75f125f7-cadf-4b5e-af30-0910e958d2ec');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+         name  department  year    head
+    0  Furkan  Bilgisayar  2023    Raif
+    1   Özlem       Kimya  2023    Asım
+    2  Kardem     Yazılım  2024  Volkan
+    3    Doga     Yazılım  2021  Volkan
+    
 
 
 ```python
@@ -4136,320 +1374,31 @@ department_skills = {
 
 skills = pd.DataFrame(department_skills)
 
-skills
-
+print(skills)
 ```
 
-
-
-
-
-  <div id="df-0d84694f-13a4-4710-9118-00ce19e91d03">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>department</th>
-      <th>skills</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Bilgisayar</td>
-      <td>Kodlama</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Bilgisayar</td>
-      <td>Linux</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Kimya</td>
-      <td>Çözelti hazırlama</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Yazılım</td>
-      <td>Kodlama</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Yazılım</td>
-      <td>Database</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-0d84694f-13a4-4710-9118-00ce19e91d03')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-0d84694f-13a4-4710-9118-00ce19e91d03 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-0d84694f-13a4-4710-9118-00ce19e91d03');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+       department             skills
+    0  Bilgisayar            Kodlama
+    1  Bilgisayar              Linux
+    2       Kimya  Çözelti hazırlama
+    3     Yazılım            Kodlama
+    4     Yazılım           Database
+    
 
 
 ```python
-pd.merge(departments, skills)
+print(pd.merge(departments, skills))
 ```
 
-
-
-
-
-  <div id="df-0026bdb1-3c0f-480f-8e71-47dc489acf33">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>department</th>
-      <th>year</th>
-      <th>head</th>
-      <th>skills</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Furkan</td>
-      <td>Bilgisayar</td>
-      <td>2023</td>
-      <td>Raif</td>
-      <td>Kodlama</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Furkan</td>
-      <td>Bilgisayar</td>
-      <td>2023</td>
-      <td>Raif</td>
-      <td>Linux</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Özlem</td>
-      <td>Kimya</td>
-      <td>2023</td>
-      <td>Asım</td>
-      <td>Çözelti hazırlama</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Kardem</td>
-      <td>Yazılım</td>
-      <td>2024</td>
-      <td>Volkan</td>
-      <td>Kodlama</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Kardem</td>
-      <td>Yazılım</td>
-      <td>2024</td>
-      <td>Volkan</td>
-      <td>Database</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Doga</td>
-      <td>Yazılım</td>
-      <td>2021</td>
-      <td>Volkan</td>
-      <td>Kodlama</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Doga</td>
-      <td>Yazılım</td>
-      <td>2021</td>
-      <td>Volkan</td>
-      <td>Database</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-0026bdb1-3c0f-480f-8e71-47dc489acf33')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-0026bdb1-3c0f-480f-8e71-47dc489acf33 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-0026bdb1-3c0f-480f-8e71-47dc489acf33');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+         name  department  year    head             skills
+    0  Furkan  Bilgisayar  2023    Raif            Kodlama
+    1  Furkan  Bilgisayar  2023    Raif              Linux
+    2   Özlem       Kimya  2023    Asım  Çözelti hazırlama
+    3  Kardem     Yazılım  2024  Volkan            Kodlama
+    4  Kardem     Yazılım  2024  Volkan           Database
+    5    Doga     Yazılım  2021  Volkan            Kodlama
+    6    Doga     Yazılım  2021  Volkan           Database
+    
 
 *Burada department_skills tablosunda olan bölümün yetenekleri belirtilmiştir. Bu tablo ile departments tablosundaki verileri birleştirme işlemi uyguladık. Son çıkan tablomuzda bir departman birden fazla yeteneğe sahip olabileceğinden bir kişiden iki tane görüyoruz.*
 
@@ -4476,192 +1425,33 @@ import seaborn as sns
 
 ```python
 df = sns.load_dataset("planets")
-df.head()
+print(df.head())
 ```
 
-
-
-
-
-  <div id="df-3b609f3c-0e42-4e4f-99b9-05a3c0e3dfb4">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>method</th>
-      <th>number</th>
-      <th>orbital_period</th>
-      <th>mass</th>
-      <th>distance</th>
-      <th>year</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Radial Velocity</td>
-      <td>1</td>
-      <td>269.300</td>
-      <td>7.10</td>
-      <td>77.40</td>
-      <td>2006</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Radial Velocity</td>
-      <td>1</td>
-      <td>874.774</td>
-      <td>2.21</td>
-      <td>56.95</td>
-      <td>2008</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Radial Velocity</td>
-      <td>1</td>
-      <td>763.000</td>
-      <td>2.60</td>
-      <td>19.84</td>
-      <td>2011</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Radial Velocity</td>
-      <td>1</td>
-      <td>326.030</td>
-      <td>19.40</td>
-      <td>110.62</td>
-      <td>2007</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Radial Velocity</td>
-      <td>1</td>
-      <td>516.220</td>
-      <td>10.50</td>
-      <td>119.47</td>
-      <td>2009</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-3b609f3c-0e42-4e4f-99b9-05a3c0e3dfb4')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-3b609f3c-0e42-4e4f-99b9-05a3c0e3dfb4 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-3b609f3c-0e42-4e4f-99b9-05a3c0e3dfb4');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+                method  number  orbital_period   mass  distance  year
+    0  Radial Velocity       1         269.300   7.10     77.40  2006
+    1  Radial Velocity       1         874.774   2.21     56.95  2008
+    2  Radial Velocity       1         763.000   2.60     19.84  2011
+    3  Radial Velocity       1         326.030  19.40    110.62  2007
+    4  Radial Velocity       1         516.220  10.50    119.47  2009
+    
 
 *seaborn kütüphanesindeki "planets" verisetini değişkenimize atıyoruz ve ekrana bastırıyoruz.*
 
 
 ```python
-df.shape
+print(df.shape)
 ```
 
-
-
-
     (1035, 6)
-
-
+    
 
 *Yüklediğimiz datasetinde 1035 satır ve 6 sütun var olduğunu gözlemledik.*
 
 
 ```python
-df.count()
+print(df.count())
 ```
-
-
-
 
     method            1035
     number            1035
@@ -4670,22 +1460,14 @@ df.count()
     distance           808
     year              1035
     dtype: int64
-
-
+    
 
 *Her bir sütündan kaç tane olduğunu belirten count methodunu kullandık.*
 
 
 ```python
-df.mean()
+print(df.mean())
 ```
-
-    /usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with 'numeric_only=None') is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
-      """Entry point for launching an IPython kernel.
-    
-
-
-
 
     number               1.785507
     orbital_period    2002.917596
@@ -4693,8 +1475,11 @@ df.mean()
     distance           264.069282
     year              2009.070531
     dtype: float64
+    
 
-
+    /usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with 'numeric_only=None') is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+      """Entry point for launching an IPython kernel.
+    
 
 *Her bir sütunun ortalamasını belirten mean methodunu kullandık.*
 
@@ -4702,601 +1487,74 @@ Eğer tek bir sütunun ortalamasını almak istersek;
 
 
 ```python
-df["number"].mean()
+print(df["number"].mean())
 ```
 
-
-
-
     1.7855072463768116
-
-
+    
 
 *Burada ise sadece number sütununun ortalamasını aldık.*
 
 
 ```python
-df.describe()
+print(df.describe())
 ```
 
-
-
-
-
-  <div id="df-b626fb95-a82d-4a25-a1a6-5c29a6e9f9a0">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-      <th>orbital_period</th>
-      <th>mass</th>
-      <th>distance</th>
-      <th>year</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>1035.000000</td>
-      <td>992.000000</td>
-      <td>513.000000</td>
-      <td>808.000000</td>
-      <td>1035.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>1.785507</td>
-      <td>2002.917596</td>
-      <td>2.638161</td>
-      <td>264.069282</td>
-      <td>2009.070531</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>1.240976</td>
-      <td>26014.728304</td>
-      <td>3.818617</td>
-      <td>733.116493</td>
-      <td>3.972567</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1.000000</td>
-      <td>0.090706</td>
-      <td>0.003600</td>
-      <td>1.350000</td>
-      <td>1989.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>1.000000</td>
-      <td>5.442540</td>
-      <td>0.229000</td>
-      <td>32.560000</td>
-      <td>2007.000000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>1.000000</td>
-      <td>39.979500</td>
-      <td>1.260000</td>
-      <td>55.250000</td>
-      <td>2010.000000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>2.000000</td>
-      <td>526.005000</td>
-      <td>3.040000</td>
-      <td>178.500000</td>
-      <td>2012.000000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>7.000000</td>
-      <td>730000.000000</td>
-      <td>25.000000</td>
-      <td>8500.000000</td>
-      <td>2014.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-b626fb95-a82d-4a25-a1a6-5c29a6e9f9a0')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-b626fb95-a82d-4a25-a1a6-5c29a6e9f9a0 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-b626fb95-a82d-4a25-a1a6-5c29a6e9f9a0');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+                number  orbital_period        mass     distance         year
+    count  1035.000000      992.000000  513.000000   808.000000  1035.000000
+    mean      1.785507     2002.917596    2.638161   264.069282  2009.070531
+    std       1.240976    26014.728304    3.818617   733.116493     3.972567
+    min       1.000000        0.090706    0.003600     1.350000  1989.000000
+    25%       1.000000        5.442540    0.229000    32.560000  2007.000000
+    50%       1.000000       39.979500    1.260000    55.250000  2010.000000
+    75%       2.000000      526.005000    3.040000   178.500000  2012.000000
+    max       7.000000   730000.000000   25.000000  8500.000000  2014.000000
+    
 
 Burada count, mean, std, min, 25%, 50%, 75% ve max methodlarını her bir sütun için uygulanmış tabloyu görüyoruz.
 
 
 ```python
-df.describe().T
+print(df.describe().T)
 ```
 
-
-
-
-
-  <div id="df-a9c66bc1-43fa-498c-8cde-c1fe3cc64b6a">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>count</th>
-      <th>mean</th>
-      <th>std</th>
-      <th>min</th>
-      <th>25%</th>
-      <th>50%</th>
-      <th>75%</th>
-      <th>max</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>number</th>
-      <td>1035.0</td>
-      <td>1.785507</td>
-      <td>1.240976</td>
-      <td>1.000000</td>
-      <td>1.00000</td>
-      <td>1.0000</td>
-      <td>2.000</td>
-      <td>7.0</td>
-    </tr>
-    <tr>
-      <th>orbital_period</th>
-      <td>992.0</td>
-      <td>2002.917596</td>
-      <td>26014.728304</td>
-      <td>0.090706</td>
-      <td>5.44254</td>
-      <td>39.9795</td>
-      <td>526.005</td>
-      <td>730000.0</td>
-    </tr>
-    <tr>
-      <th>mass</th>
-      <td>513.0</td>
-      <td>2.638161</td>
-      <td>3.818617</td>
-      <td>0.003600</td>
-      <td>0.22900</td>
-      <td>1.2600</td>
-      <td>3.040</td>
-      <td>25.0</td>
-    </tr>
-    <tr>
-      <th>distance</th>
-      <td>808.0</td>
-      <td>264.069282</td>
-      <td>733.116493</td>
-      <td>1.350000</td>
-      <td>32.56000</td>
-      <td>55.2500</td>
-      <td>178.500</td>
-      <td>8500.0</td>
-    </tr>
-    <tr>
-      <th>year</th>
-      <td>1035.0</td>
-      <td>2009.070531</td>
-      <td>3.972567</td>
-      <td>1989.000000</td>
-      <td>2007.00000</td>
-      <td>2010.0000</td>
-      <td>2012.000</td>
-      <td>2014.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a9c66bc1-43fa-498c-8cde-c1fe3cc64b6a')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-a9c66bc1-43fa-498c-8cde-c1fe3cc64b6a button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a9c66bc1-43fa-498c-8cde-c1fe3cc64b6a');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+                     count         mean           std          min         25%  \
+    number          1035.0     1.785507      1.240976     1.000000     1.00000   
+    orbital_period   992.0  2002.917596  26014.728304     0.090706     5.44254   
+    mass             513.0     2.638161      3.818617     0.003600     0.22900   
+    distance         808.0   264.069282    733.116493     1.350000    32.56000   
+    year            1035.0  2009.070531      3.972567  1989.000000  2007.00000   
+    
+                          50%       75%       max  
+    number             1.0000     2.000       7.0  
+    orbital_period    39.9795   526.005  730000.0  
+    mass               1.2600     3.040      25.0  
+    distance          55.2500   178.500    8500.0  
+    year            2010.0000  2012.000    2014.0  
+    
 
 *Okunabilirliği arttırmak adına describe methodunun transpozunu aldık.*
 
 
 ```python
-df.dropna()
+print(df.dropna())
 ```
 
-
-
-
-
-  <div id="df-41686160-fcb7-4495-99be-22a3fc8088b0">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>method</th>
-      <th>number</th>
-      <th>orbital_period</th>
-      <th>mass</th>
-      <th>distance</th>
-      <th>year</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Radial Velocity</td>
-      <td>1</td>
-      <td>269.30000</td>
-      <td>7.100</td>
-      <td>77.40</td>
-      <td>2006</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Radial Velocity</td>
-      <td>1</td>
-      <td>874.77400</td>
-      <td>2.210</td>
-      <td>56.95</td>
-      <td>2008</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Radial Velocity</td>
-      <td>1</td>
-      <td>763.00000</td>
-      <td>2.600</td>
-      <td>19.84</td>
-      <td>2011</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Radial Velocity</td>
-      <td>1</td>
-      <td>326.03000</td>
-      <td>19.400</td>
-      <td>110.62</td>
-      <td>2007</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Radial Velocity</td>
-      <td>1</td>
-      <td>516.22000</td>
-      <td>10.500</td>
-      <td>119.47</td>
-      <td>2009</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>640</th>
-      <td>Radial Velocity</td>
-      <td>1</td>
-      <td>111.70000</td>
-      <td>2.100</td>
-      <td>14.90</td>
-      <td>2009</td>
-    </tr>
-    <tr>
-      <th>641</th>
-      <td>Radial Velocity</td>
-      <td>1</td>
-      <td>5.05050</td>
-      <td>1.068</td>
-      <td>44.46</td>
-      <td>2013</td>
-    </tr>
-    <tr>
-      <th>642</th>
-      <td>Radial Velocity</td>
-      <td>1</td>
-      <td>311.28800</td>
-      <td>1.940</td>
-      <td>17.24</td>
-      <td>1999</td>
-    </tr>
-    <tr>
-      <th>649</th>
-      <td>Transit</td>
-      <td>1</td>
-      <td>2.70339</td>
-      <td>1.470</td>
-      <td>178.00</td>
-      <td>2013</td>
-    </tr>
-    <tr>
-      <th>784</th>
-      <td>Radial Velocity</td>
-      <td>3</td>
-      <td>580.00000</td>
-      <td>0.947</td>
-      <td>135.00</td>
-      <td>2012</td>
-    </tr>
-  </tbody>
-</table>
-<p>498 rows × 6 columns</p>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-41686160-fcb7-4495-99be-22a3fc8088b0')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-41686160-fcb7-4495-99be-22a3fc8088b0 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-41686160-fcb7-4495-99be-22a3fc8088b0');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+                  method  number  orbital_period    mass  distance  year
+    0    Radial Velocity       1       269.30000   7.100     77.40  2006
+    1    Radial Velocity       1       874.77400   2.210     56.95  2008
+    2    Radial Velocity       1       763.00000   2.600     19.84  2011
+    3    Radial Velocity       1       326.03000  19.400    110.62  2007
+    4    Radial Velocity       1       516.22000  10.500    119.47  2009
+    ..               ...     ...             ...     ...       ...   ...
+    640  Radial Velocity       1       111.70000   2.100     14.90  2009
+    641  Radial Velocity       1         5.05050   1.068     44.46  2013
+    642  Radial Velocity       1       311.28800   1.940     17.24  1999
+    649          Transit       1         2.70339   1.470    178.00  2013
+    784  Radial Velocity       3       580.00000   0.947    135.00  2012
+    
+    [498 rows x 6 columns]
+    
 
 *Burada verisetimizde var olan verilerden eksik olanları çıkarttık ve ortaya 784 sütun çıktı.*
 
@@ -5313,415 +1571,45 @@ data = {
 }
 
 df = pd.DataFrame(data, columns = ["Class", "student exam result"])
-df
+print(df)
 ```
 
-
-
-
-
-  <div id="df-a952a3b1-ab2d-4d50-8678-02ccf3421b02">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Class</th>
-      <th>student exam result</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>a</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>b</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>c</td>
-      <td>32</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>a</td>
-      <td>40</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>b</td>
-      <td>32</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>c</td>
-      <td>11</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a952a3b1-ab2d-4d50-8678-02ccf3421b02')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-a952a3b1-ab2d-4d50-8678-02ccf3421b02 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a952a3b1-ab2d-4d50-8678-02ccf3421b02');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+      Class  student exam result
+    0     a                   20
+    1     b                   13
+    2     c                   32
+    3     a                   40
+    4     b                   32
+    5     c                   11
+    
 
 *Burada sınıflar ve sınıflardaki herhangi bir kişinin aldığı not belirtilmektedir. Herhangi bir sınıf için bakılmak istenirse groupby kullanılabilir.*
 
 
 ```python
-df.groupby("Class").mean()
+print(df.groupby("Class").mean())
 ```
 
-
-
-
-
-  <div id="df-8245822e-8536-443f-99c8-1edcef9e36a3">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>student exam result</th>
-    </tr>
-    <tr>
-      <th>Class</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>a</th>
-      <td>30.0</td>
-    </tr>
-    <tr>
-      <th>b</th>
-      <td>22.5</td>
-    </tr>
-    <tr>
-      <th>c</th>
-      <td>21.5</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-8245822e-8536-443f-99c8-1edcef9e36a3')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-8245822e-8536-443f-99c8-1edcef9e36a3 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-8245822e-8536-443f-99c8-1edcef9e36a3');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+           student exam result
+    Class                     
+    a                     30.0
+    b                     22.5
+    c                     21.5
+    
 
 *Burada ise gruplanan sınıflara göre ortalama notu görmekteyiz.*
 
 
 ```python
-df.groupby("Class").sum()
+print(df.groupby("Class").sum())
 ```
 
-
-
-
-
-  <div id="df-413fe715-bf91-49c4-96a6-45d02ffe8ee5">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>student exam result</th>
-    </tr>
-    <tr>
-      <th>Class</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>a</th>
-      <td>60</td>
-    </tr>
-    <tr>
-      <th>b</th>
-      <td>45</td>
-    </tr>
-    <tr>
-      <th>c</th>
-      <td>43</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-413fe715-bf91-49c4-96a6-45d02ffe8ee5')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-413fe715-bf91-49c4-96a6-45d02ffe8ee5 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-413fe715-bf91-49c4-96a6-45d02ffe8ee5');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+           student exam result
+    Class                     
+    a                       60
+    b                       45
+    c                       43
+    
 
 *Burada ise gruplanan sınıflardaki öğrencilerin toplam notlarını görmekteyiz.*
 
@@ -5732,637 +1620,104 @@ Toplulaştırmada kullanılan veriseti üzerinde gruplama;
 import seaborn as sns
 
 df = sns.load_dataset("planets")
-df
+print(df)
 ```
 
-
-
-
-
-  <div id="df-7fe1d062-6f6e-4737-ae28-24c96e196016">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>method</th>
-      <th>number</th>
-      <th>orbital_period</th>
-      <th>mass</th>
-      <th>distance</th>
-      <th>year</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Radial Velocity</td>
-      <td>1</td>
-      <td>269.300000</td>
-      <td>7.10</td>
-      <td>77.40</td>
-      <td>2006</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Radial Velocity</td>
-      <td>1</td>
-      <td>874.774000</td>
-      <td>2.21</td>
-      <td>56.95</td>
-      <td>2008</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Radial Velocity</td>
-      <td>1</td>
-      <td>763.000000</td>
-      <td>2.60</td>
-      <td>19.84</td>
-      <td>2011</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Radial Velocity</td>
-      <td>1</td>
-      <td>326.030000</td>
-      <td>19.40</td>
-      <td>110.62</td>
-      <td>2007</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Radial Velocity</td>
-      <td>1</td>
-      <td>516.220000</td>
-      <td>10.50</td>
-      <td>119.47</td>
-      <td>2009</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>1030</th>
-      <td>Transit</td>
-      <td>1</td>
-      <td>3.941507</td>
-      <td>NaN</td>
-      <td>172.00</td>
-      <td>2006</td>
-    </tr>
-    <tr>
-      <th>1031</th>
-      <td>Transit</td>
-      <td>1</td>
-      <td>2.615864</td>
-      <td>NaN</td>
-      <td>148.00</td>
-      <td>2007</td>
-    </tr>
-    <tr>
-      <th>1032</th>
-      <td>Transit</td>
-      <td>1</td>
-      <td>3.191524</td>
-      <td>NaN</td>
-      <td>174.00</td>
-      <td>2007</td>
-    </tr>
-    <tr>
-      <th>1033</th>
-      <td>Transit</td>
-      <td>1</td>
-      <td>4.125083</td>
-      <td>NaN</td>
-      <td>293.00</td>
-      <td>2008</td>
-    </tr>
-    <tr>
-      <th>1034</th>
-      <td>Transit</td>
-      <td>1</td>
-      <td>4.187757</td>
-      <td>NaN</td>
-      <td>260.00</td>
-      <td>2008</td>
-    </tr>
-  </tbody>
-</table>
-<p>1035 rows × 6 columns</p>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-7fe1d062-6f6e-4737-ae28-24c96e196016')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-7fe1d062-6f6e-4737-ae28-24c96e196016 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-7fe1d062-6f6e-4737-ae28-24c96e196016');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+                   method  number  orbital_period   mass  distance  year
+    0     Radial Velocity       1      269.300000   7.10     77.40  2006
+    1     Radial Velocity       1      874.774000   2.21     56.95  2008
+    2     Radial Velocity       1      763.000000   2.60     19.84  2011
+    3     Radial Velocity       1      326.030000  19.40    110.62  2007
+    4     Radial Velocity       1      516.220000  10.50    119.47  2009
+    ...               ...     ...             ...    ...       ...   ...
+    1030          Transit       1        3.941507    NaN    172.00  2006
+    1031          Transit       1        2.615864    NaN    148.00  2007
+    1032          Transit       1        3.191524    NaN    174.00  2007
+    1033          Transit       1        4.125083    NaN    293.00  2008
+    1034          Transit       1        4.187757    NaN    260.00  2008
+    
+    [1035 rows x 6 columns]
+    
 
 *Burada method sütunu bir kategorik değişken olduğu için bu sütunu gruplayabiliriz.*
 
 
 ```python
-df.groupby("method").describe()
+print(df.groupby("method").describe())
 ```
 
-
-
-
-
-  <div id="df-37ff8671-7e11-4106-bf18-dc83612274dd">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead tr th {
-        text-align: left;
-    }
-
-    .dataframe thead tr:last-of-type th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr>
-      <th></th>
-      <th colspan="8" halign="left">number</th>
-      <th colspan="2" halign="left">orbital_period</th>
-      <th>...</th>
-      <th colspan="2" halign="left">distance</th>
-      <th colspan="8" halign="left">year</th>
-    </tr>
-    <tr>
-      <th></th>
-      <th>count</th>
-      <th>mean</th>
-      <th>std</th>
-      <th>min</th>
-      <th>25%</th>
-      <th>50%</th>
-      <th>75%</th>
-      <th>max</th>
-      <th>count</th>
-      <th>mean</th>
-      <th>...</th>
-      <th>75%</th>
-      <th>max</th>
-      <th>count</th>
-      <th>mean</th>
-      <th>std</th>
-      <th>min</th>
-      <th>25%</th>
-      <th>50%</th>
-      <th>75%</th>
-      <th>max</th>
-    </tr>
-    <tr>
-      <th>method</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Astrometry</th>
-      <td>2.0</td>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.00</td>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>631.180000</td>
-      <td>...</td>
-      <td>19.3225</td>
-      <td>20.77</td>
-      <td>2.0</td>
-      <td>2011.500000</td>
-      <td>2.121320</td>
-      <td>2010.0</td>
-      <td>2010.75</td>
-      <td>2011.5</td>
-      <td>2012.25</td>
-      <td>2013.0</td>
-    </tr>
-    <tr>
-      <th>Eclipse Timing Variations</th>
-      <td>9.0</td>
-      <td>1.666667</td>
-      <td>0.500000</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>2.00</td>
-      <td>2.0</td>
-      <td>9.0</td>
-      <td>4751.644444</td>
-      <td>...</td>
-      <td>500.0000</td>
-      <td>500.00</td>
-      <td>9.0</td>
-      <td>2010.000000</td>
-      <td>1.414214</td>
-      <td>2008.0</td>
-      <td>2009.00</td>
-      <td>2010.0</td>
-      <td>2011.00</td>
-      <td>2012.0</td>
-    </tr>
-    <tr>
-      <th>Imaging</th>
-      <td>38.0</td>
-      <td>1.315789</td>
-      <td>0.933035</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.00</td>
-      <td>4.0</td>
-      <td>12.0</td>
-      <td>118247.737500</td>
-      <td>...</td>
-      <td>132.6975</td>
-      <td>165.00</td>
-      <td>38.0</td>
-      <td>2009.131579</td>
-      <td>2.781901</td>
-      <td>2004.0</td>
-      <td>2008.00</td>
-      <td>2009.0</td>
-      <td>2011.00</td>
-      <td>2013.0</td>
-    </tr>
-    <tr>
-      <th>Microlensing</th>
-      <td>23.0</td>
-      <td>1.173913</td>
-      <td>0.387553</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.00</td>
-      <td>2.0</td>
-      <td>7.0</td>
-      <td>3153.571429</td>
-      <td>...</td>
-      <td>4747.5000</td>
-      <td>7720.00</td>
-      <td>23.0</td>
-      <td>2009.782609</td>
-      <td>2.859697</td>
-      <td>2004.0</td>
-      <td>2008.00</td>
-      <td>2010.0</td>
-      <td>2012.00</td>
-      <td>2013.0</td>
-    </tr>
-    <tr>
-      <th>Orbital Brightness Modulation</th>
-      <td>3.0</td>
-      <td>1.666667</td>
-      <td>0.577350</td>
-      <td>1.0</td>
-      <td>1.5</td>
-      <td>2.0</td>
-      <td>2.00</td>
-      <td>2.0</td>
-      <td>3.0</td>
-      <td>0.709307</td>
-      <td>...</td>
-      <td>1180.0000</td>
-      <td>1180.00</td>
-      <td>3.0</td>
-      <td>2011.666667</td>
-      <td>1.154701</td>
-      <td>2011.0</td>
-      <td>2011.00</td>
-      <td>2011.0</td>
-      <td>2012.00</td>
-      <td>2013.0</td>
-    </tr>
-    <tr>
-      <th>Pulsar Timing</th>
-      <td>5.0</td>
-      <td>2.200000</td>
-      <td>1.095445</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>3.0</td>
-      <td>3.00</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>7343.021201</td>
-      <td>...</td>
-      <td>1200.0000</td>
-      <td>1200.00</td>
-      <td>5.0</td>
-      <td>1998.400000</td>
-      <td>8.384510</td>
-      <td>1992.0</td>
-      <td>1992.00</td>
-      <td>1994.0</td>
-      <td>2003.00</td>
-      <td>2011.0</td>
-    </tr>
-    <tr>
-      <th>Pulsation Timing Variations</th>
-      <td>1.0</td>
-      <td>1.000000</td>
-      <td>NaN</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.00</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1170.000000</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>1.0</td>
-      <td>2007.000000</td>
-      <td>NaN</td>
-      <td>2007.0</td>
-      <td>2007.00</td>
-      <td>2007.0</td>
-      <td>2007.00</td>
-      <td>2007.0</td>
-    </tr>
-    <tr>
-      <th>Radial Velocity</th>
-      <td>553.0</td>
-      <td>1.721519</td>
-      <td>1.157141</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>2.00</td>
-      <td>6.0</td>
-      <td>553.0</td>
-      <td>823.354680</td>
-      <td>...</td>
-      <td>59.2175</td>
-      <td>354.00</td>
-      <td>553.0</td>
-      <td>2007.518987</td>
-      <td>4.249052</td>
-      <td>1989.0</td>
-      <td>2005.00</td>
-      <td>2009.0</td>
-      <td>2011.00</td>
-      <td>2014.0</td>
-    </tr>
-    <tr>
-      <th>Transit</th>
-      <td>397.0</td>
-      <td>1.954660</td>
-      <td>1.399119</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>2.00</td>
-      <td>7.0</td>
-      <td>397.0</td>
-      <td>21.102073</td>
-      <td>...</td>
-      <td>650.0000</td>
-      <td>8500.00</td>
-      <td>397.0</td>
-      <td>2011.236776</td>
-      <td>2.077867</td>
-      <td>2002.0</td>
-      <td>2010.00</td>
-      <td>2012.0</td>
-      <td>2013.00</td>
-      <td>2014.0</td>
-    </tr>
-    <tr>
-      <th>Transit Timing Variations</th>
-      <td>4.0</td>
-      <td>2.250000</td>
-      <td>0.500000</td>
-      <td>2.0</td>
-      <td>2.0</td>
-      <td>2.0</td>
-      <td>2.25</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>79.783500</td>
-      <td>...</td>
-      <td>1487.0000</td>
-      <td>2119.00</td>
-      <td>4.0</td>
-      <td>2012.500000</td>
-      <td>1.290994</td>
-      <td>2011.0</td>
-      <td>2011.75</td>
-      <td>2012.5</td>
-      <td>2013.25</td>
-      <td>2014.0</td>
-    </tr>
-  </tbody>
-</table>
-<p>10 rows × 40 columns</p>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-37ff8671-7e11-4106-bf18-dc83612274dd')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-37ff8671-7e11-4106-bf18-dc83612274dd button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-37ff8671-7e11-4106-bf18-dc83612274dd');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+                                  number                                           \
+                                   count      mean       std  min  25%  50%   75%   
+    method                                                                          
+    Astrometry                       2.0  1.000000  0.000000  1.0  1.0  1.0  1.00   
+    Eclipse Timing Variations        9.0  1.666667  0.500000  1.0  1.0  2.0  2.00   
+    Imaging                         38.0  1.315789  0.933035  1.0  1.0  1.0  1.00   
+    Microlensing                    23.0  1.173913  0.387553  1.0  1.0  1.0  1.00   
+    Orbital Brightness Modulation    3.0  1.666667  0.577350  1.0  1.5  2.0  2.00   
+    Pulsar Timing                    5.0  2.200000  1.095445  1.0  1.0  3.0  3.00   
+    Pulsation Timing Variations      1.0  1.000000       NaN  1.0  1.0  1.0  1.00   
+    Radial Velocity                553.0  1.721519  1.157141  1.0  1.0  1.0  2.00   
+    Transit                        397.0  1.954660  1.399119  1.0  1.0  1.0  2.00   
+    Transit Timing Variations        4.0  2.250000  0.500000  2.0  2.0  2.0  2.25   
+    
+                                       orbital_period                 ...  \
+                                   max          count           mean  ...   
+    method                                                            ...   
+    Astrometry                     1.0            2.0     631.180000  ...   
+    Eclipse Timing Variations      2.0            9.0    4751.644444  ...   
+    Imaging                        4.0           12.0  118247.737500  ...   
+    Microlensing                   2.0            7.0    3153.571429  ...   
+    Orbital Brightness Modulation  2.0            3.0       0.709307  ...   
+    Pulsar Timing                  3.0            5.0    7343.021201  ...   
+    Pulsation Timing Variations    1.0            1.0    1170.000000  ...   
+    Radial Velocity                6.0          553.0     823.354680  ...   
+    Transit                        7.0          397.0      21.102073  ...   
+    Transit Timing Variations      3.0            3.0      79.783500  ...   
+    
+                                    distance            year               \
+                                         75%      max  count         mean   
+    method                                                                  
+    Astrometry                       19.3225    20.77    2.0  2011.500000   
+    Eclipse Timing Variations       500.0000   500.00    9.0  2010.000000   
+    Imaging                         132.6975   165.00   38.0  2009.131579   
+    Microlensing                   4747.5000  7720.00   23.0  2009.782609   
+    Orbital Brightness Modulation  1180.0000  1180.00    3.0  2011.666667   
+    Pulsar Timing                  1200.0000  1200.00    5.0  1998.400000   
+    Pulsation Timing Variations          NaN      NaN    1.0  2007.000000   
+    Radial Velocity                  59.2175   354.00  553.0  2007.518987   
+    Transit                         650.0000  8500.00  397.0  2011.236776   
+    Transit Timing Variations      1487.0000  2119.00    4.0  2012.500000   
+    
+                                                                               \
+                                        std     min      25%     50%      75%   
+    method                                                                      
+    Astrometry                     2.121320  2010.0  2010.75  2011.5  2012.25   
+    Eclipse Timing Variations      1.414214  2008.0  2009.00  2010.0  2011.00   
+    Imaging                        2.781901  2004.0  2008.00  2009.0  2011.00   
+    Microlensing                   2.859697  2004.0  2008.00  2010.0  2012.00   
+    Orbital Brightness Modulation  1.154701  2011.0  2011.00  2011.0  2012.00   
+    Pulsar Timing                  8.384510  1992.0  1992.00  1994.0  2003.00   
+    Pulsation Timing Variations         NaN  2007.0  2007.00  2007.0  2007.00   
+    Radial Velocity                4.249052  1989.0  2005.00  2009.0  2011.00   
+    Transit                        2.077867  2002.0  2010.00  2012.0  2013.00   
+    Transit Timing Variations      1.290994  2011.0  2011.75  2012.5  2013.25   
+    
+                                           
+                                      max  
+    method                                 
+    Astrometry                     2013.0  
+    Eclipse Timing Variations      2012.0  
+    Imaging                        2013.0  
+    Microlensing                   2013.0  
+    Orbital Brightness Modulation  2013.0  
+    Pulsar Timing                  2011.0  
+    Pulsation Timing Variations    2007.0  
+    Radial Velocity                2014.0  
+    Transit                        2014.0  
+    Transit Timing Variations      2014.0  
+    
+    [10 rows x 40 columns]
+    
 
 *Burada her bir sütun için describe methodu çağırılıyor.*
 
@@ -6370,246 +1725,35 @@ Tek bir sütun için toplulaştırma;
 
 
 ```python
-df.groupby("method")["number"].describe()
+print(df.groupby("method")["number"].describe())
 ```
 
-
-
-
-
-  <div id="df-010442d3-a068-4856-9956-9e8026e43df1">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>count</th>
-      <th>mean</th>
-      <th>std</th>
-      <th>min</th>
-      <th>25%</th>
-      <th>50%</th>
-      <th>75%</th>
-      <th>max</th>
-    </tr>
-    <tr>
-      <th>method</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Astrometry</th>
-      <td>2.0</td>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.00</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>Eclipse Timing Variations</th>
-      <td>9.0</td>
-      <td>1.666667</td>
-      <td>0.500000</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>2.00</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>Imaging</th>
-      <td>38.0</td>
-      <td>1.315789</td>
-      <td>0.933035</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.00</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>Microlensing</th>
-      <td>23.0</td>
-      <td>1.173913</td>
-      <td>0.387553</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.00</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>Orbital Brightness Modulation</th>
-      <td>3.0</td>
-      <td>1.666667</td>
-      <td>0.577350</td>
-      <td>1.0</td>
-      <td>1.5</td>
-      <td>2.0</td>
-      <td>2.00</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>Pulsar Timing</th>
-      <td>5.0</td>
-      <td>2.200000</td>
-      <td>1.095445</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>3.0</td>
-      <td>3.00</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>Pulsation Timing Variations</th>
-      <td>1.0</td>
-      <td>1.000000</td>
-      <td>NaN</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.00</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>Radial Velocity</th>
-      <td>553.0</td>
-      <td>1.721519</td>
-      <td>1.157141</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>2.00</td>
-      <td>6.0</td>
-    </tr>
-    <tr>
-      <th>Transit</th>
-      <td>397.0</td>
-      <td>1.954660</td>
-      <td>1.399119</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>2.00</td>
-      <td>7.0</td>
-    </tr>
-    <tr>
-      <th>Transit Timing Variations</th>
-      <td>4.0</td>
-      <td>2.250000</td>
-      <td>0.500000</td>
-      <td>2.0</td>
-      <td>2.0</td>
-      <td>2.0</td>
-      <td>2.25</td>
-      <td>3.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-010442d3-a068-4856-9956-9e8026e43df1')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-010442d3-a068-4856-9956-9e8026e43df1 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-010442d3-a068-4856-9956-9e8026e43df1');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+                                   count      mean       std  min  25%  50%   75%  \
+    method                                                                          
+    Astrometry                       2.0  1.000000  0.000000  1.0  1.0  1.0  1.00   
+    Eclipse Timing Variations        9.0  1.666667  0.500000  1.0  1.0  2.0  2.00   
+    Imaging                         38.0  1.315789  0.933035  1.0  1.0  1.0  1.00   
+    Microlensing                    23.0  1.173913  0.387553  1.0  1.0  1.0  1.00   
+    Orbital Brightness Modulation    3.0  1.666667  0.577350  1.0  1.5  2.0  2.00   
+    Pulsar Timing                    5.0  2.200000  1.095445  1.0  1.0  3.0  3.00   
+    Pulsation Timing Variations      1.0  1.000000       NaN  1.0  1.0  1.0  1.00   
+    Radial Velocity                553.0  1.721519  1.157141  1.0  1.0  1.0  2.00   
+    Transit                        397.0  1.954660  1.399119  1.0  1.0  1.0  2.00   
+    Transit Timing Variations        4.0  2.250000  0.500000  2.0  2.0  2.0  2.25   
+    
+                                   max  
+    method                              
+    Astrometry                     1.0  
+    Eclipse Timing Variations      2.0  
+    Imaging                        4.0  
+    Microlensing                   2.0  
+    Orbital Brightness Modulation  2.0  
+    Pulsar Timing                  3.0  
+    Pulsation Timing Variations    1.0  
+    Radial Velocity                6.0  
+    Transit                        7.0  
+    Transit Timing Variations      3.0  
+    
 
 *Burada method sütununu gruplaştırdık ve bu gruplaştırmadan sonra number sütününün describe methodunu çağırdık.*
 
@@ -6635,323 +1779,32 @@ dictionary = {
 
 df = pd.DataFrame(dictionary)
 
-df
+print(df)
 ```
 
-
-
-
-
-  <div id="df-f7aec2c8-ba2e-4aaa-b0c7-1789bfefd55c">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>class</th>
-      <th>students_id</th>
-      <th>exam_result</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>a</td>
-      <td>35</td>
-      <td>100</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>b</td>
-      <td>27</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>c</td>
-      <td>15</td>
-      <td>40</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>a</td>
-      <td>41</td>
-      <td>50</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>b</td>
-      <td>80</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>c</td>
-      <td>9</td>
-      <td>90</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f7aec2c8-ba2e-4aaa-b0c7-1789bfefd55c')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-f7aec2c8-ba2e-4aaa-b0c7-1789bfefd55c button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f7aec2c8-ba2e-4aaa-b0c7-1789bfefd55c');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+      class  students_id  exam_result
+    0     a           35          100
+    1     b           27           20
+    2     c           15           40
+    3     a           41           50
+    4     b           80           14
+    5     c            9           90
+    
 
 #### **Aggregate**
 
 
 ```python
-df.groupby("class").aggregate(["min", np.median, "max"])
+print(df.groupby("class").aggregate(["min", np.median, "max"]))
 ```
 
-
-
-
-
-  <div id="df-5bc9ef7a-131e-418f-9f7f-ad6ce3e45613">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead tr th {
-        text-align: left;
-    }
-
-    .dataframe thead tr:last-of-type th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr>
-      <th></th>
-      <th colspan="3" halign="left">students_id</th>
-      <th colspan="3" halign="left">exam_result</th>
-    </tr>
-    <tr>
-      <th></th>
-      <th>min</th>
-      <th>median</th>
-      <th>max</th>
-      <th>min</th>
-      <th>median</th>
-      <th>max</th>
-    </tr>
-    <tr>
-      <th>class</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>a</th>
-      <td>35</td>
-      <td>38.0</td>
-      <td>41</td>
-      <td>50</td>
-      <td>75.0</td>
-      <td>100</td>
-    </tr>
-    <tr>
-      <th>b</th>
-      <td>27</td>
-      <td>53.5</td>
-      <td>80</td>
-      <td>14</td>
-      <td>17.0</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>c</th>
-      <td>9</td>
-      <td>12.0</td>
-      <td>15</td>
-      <td>40</td>
-      <td>65.0</td>
-      <td>90</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-5bc9ef7a-131e-418f-9f7f-ad6ce3e45613')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-5bc9ef7a-131e-418f-9f7f-ad6ce3e45613 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-5bc9ef7a-131e-418f-9f7f-ad6ce3e45613');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+          students_id            exam_result            
+                  min median max         min median  max
+    class                                               
+    a              35   38.0  41          50   75.0  100
+    b              27   53.5  80          14   17.0   20
+    c               9   12.0  15          40   65.0   90
+    
 
 *Burada verisetimizi class sütununa göre grupladık ve sonrasında aggregate methodu ile bu gruplanan tablodan min, median ve max değerletini getirdik.*
 
@@ -6962,153 +1815,16 @@ query = {
     "exam_result" : ["min", "max"] 
 }
 
-df.groupby("class").aggregate(query)
+print(df.groupby("class").aggregate(query))
 ```
 
-
-
-
-
-  <div id="df-e5c08632-fc7d-4347-8680-fa333ea38009">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead tr th {
-        text-align: left;
-    }
-
-    .dataframe thead tr:last-of-type th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr>
-      <th></th>
-      <th>students_id</th>
-      <th colspan="2" halign="left">exam_result</th>
-    </tr>
-    <tr>
-      <th></th>
-      <th>median</th>
-      <th>min</th>
-      <th>max</th>
-    </tr>
-    <tr>
-      <th>class</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>a</th>
-      <td>38.0</td>
-      <td>50</td>
-      <td>100</td>
-    </tr>
-    <tr>
-      <th>b</th>
-      <td>53.5</td>
-      <td>14</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>c</th>
-      <td>12.0</td>
-      <td>40</td>
-      <td>90</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e5c08632-fc7d-4347-8680-fa333ea38009')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-e5c08632-fc7d-4347-8680-fa333ea38009 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e5c08632-fc7d-4347-8680-fa333ea38009');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+          students_id exam_result     
+               median         min  max
+    class                             
+    a            38.0          50  100
+    b            53.5          14   20
+    c            12.0          40   90
+    
 
 *Burada farklı sütunlara farklı işlemler uyguladık. students_id sütununa median işlemini exam_result sütununa da min ve max işlemini uyguladık*
 
@@ -7126,144 +1842,15 @@ def filter_func(df):
 
 
 ```python
-df.groupby("class").filter(filter_func)
+print(df.groupby("class").filter(filter_func))
 ```
 
-
-
-
-
-  <div id="df-c9ce7c7c-6950-46ab-b9d4-da4bec995bed">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>class</th>
-      <th>students_id</th>
-      <th>exam_result</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>a</td>
-      <td>35</td>
-      <td>100</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>c</td>
-      <td>15</td>
-      <td>40</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>a</td>
-      <td>41</td>
-      <td>50</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>c</td>
-      <td>9</td>
-      <td>90</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c9ce7c7c-6950-46ab-b9d4-da4bec995bed')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-c9ce7c7c-6950-46ab-b9d4-da4bec995bed button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c9ce7c7c-6950-46ab-b9d4-da4bec995bed');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+      class  students_id  exam_result
+    0     a           35          100
+    2     c           15           40
+    3     a           41           50
+    5     c            9           90
+    
 
 *Burada class sütununa göre bir gruplama işlemi yaptık. Bu sütunlama işleminin ardından kendi yazdığımız fonksiyona göre filtreleme işlemi yaptık. Burada fonksiyonumuz exam_result tablosundaki standart sapması 9 dan büyük olanları geri döndürdü.*
 
@@ -7275,149 +1862,17 @@ Değişkenlerin hepsinde gezip istediğimiz fonksiyonu uygulayan method.
 ```python
 change_df = df.iloc[:, 1:3]
 
-change_df.transform(lambda value: value - value.mean())
+print(change_df.transform(lambda value: value - value.mean()))
 ```
 
-
-
-
-
-  <div id="df-cfb28c00-980d-4e8a-83f8-5df753abf09f">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>students_id</th>
-      <th>exam_result</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0.5</td>
-      <td>47.666667</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>-7.5</td>
-      <td>-32.333333</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>-19.5</td>
-      <td>-12.333333</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>6.5</td>
-      <td>-2.333333</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>45.5</td>
-      <td>-38.333333</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>-25.5</td>
-      <td>37.666667</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-cfb28c00-980d-4e8a-83f8-5df753abf09f')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-cfb28c00-980d-4e8a-83f8-5df753abf09f button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-cfb28c00-980d-4e8a-83f8-5df753abf09f');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+       students_id  exam_result
+    0          0.5    47.666667
+    1         -7.5   -32.333333
+    2        -19.5   -12.333333
+    3          6.5    -2.333333
+    4         45.5   -38.333333
+    5        -25.5    37.666667
+    
 
 *Burada class sütunu bir kategorik değişken olduğundan dolayı, biz bu sütunu almayıp yeni bir değişkene atıyoruz. Ardından değerlerden değerlerin ortalamasını çıkaran bir fonksiyon yazdık.*
 
@@ -7429,149 +1884,17 @@ DataFramedeki değişkenlerin üzerinde gezen ve toplulaştırma amacıyla kulla
 ```python
 change_df = df.iloc[:, 1:3]
 
-change_df
+print(change_df)
 ```
 
-
-
-
-
-  <div id="df-906f63c7-a167-496d-867a-1c55b1036e5f">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>students_id</th>
-      <th>exam_result</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>35</td>
-      <td>100</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>27</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>15</td>
-      <td>40</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>41</td>
-      <td>50</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>80</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>9</td>
-      <td>90</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-906f63c7-a167-496d-867a-1c55b1036e5f')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-906f63c7-a167-496d-867a-1c55b1036e5f button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-906f63c7-a167-496d-867a-1c55b1036e5f');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-
-
-
+       students_id  exam_result
+    0           35          100
+    1           27           20
+    2           15           40
+    3           41           50
+    4           80           14
+    5            9           90
+    
 
 *Burada class olan sütunumuzu almayıp students_id ve exam_result sütununu farklı bir değişkene atadık.*
 
